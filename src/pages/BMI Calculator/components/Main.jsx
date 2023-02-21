@@ -40,8 +40,6 @@ const Main = () => {
 		handleHealth()
 	})
 
-	function clearBmi() {}
-
 	return (
 		<div>
 			<div className='mx-auto mt-32 flex flex-col items-center rounded-md bg-gradient-to-br from-black/20 to-black/20 px-8 pt-8 pb-8 shadow-2xl md:max-w-[500px]'>
