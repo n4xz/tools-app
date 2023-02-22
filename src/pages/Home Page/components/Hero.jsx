@@ -1,6 +1,6 @@
 export default function Hero() {
   return (
-		<section className='w-min'>
+		<section>
 			<h1 className='min-w-max md:text-6xl border-t-[0.5px] border-l-[0.5px] px-4 pt-4 -translate-x-1 text-3xl sm:text-4xl font-bold'>
 				Think of an app.
 			</h1>
