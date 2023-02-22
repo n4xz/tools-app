@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { HiMenuAlt3 } from 'react-icons/hi'
+import { Link } from 'react-router-dom'
 import Menu from './Menu'
 
 export default function Navbar() {
@@ -16,12 +17,12 @@ export default function Navbar() {
 						Everyday Tools
 					</a>
 					<div className='hidden w-max items-center gap-8 text-white md:flex'>
-						<a href='/todo' className='transition-transform duration-200 hover:scale-110'>
+						<Link to='/todo' className='transition-transform duration-200 hover:scale-110'>
 							Todo List
-						</a>
-						<a href='/bmi' className='transition-transform duration-200 hover:scale-110'>
+						</Link>
+						<Link to='/bmi' className='transition-transform duration-200 hover:scale-110'>
 							BMI Calculator
-						</a>
+						</Link>
 					</div>
 					<button className='md:hidden' onClick={handleMenu}>
 						<HiMenuAlt3 size={40} />

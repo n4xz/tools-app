@@ -1,4 +1,5 @@
 import { HiOutlineX } from 'react-icons/hi'
+import { Link } from 'react-router-dom'
 
 export default function Menu({menu, handleMenu}) {
 	return (
@@ -12,9 +13,9 @@ export default function Menu({menu, handleMenu}) {
 				</div>
 				<li className='mt-16 mb-2 border-b'>Choose your app</li>
 				<li className='mt-2 mb-1 h-[1px] w-full bg-neutral-800'></li>
-				<a href='/todo' className='p-4'>Todo List</a>
+				<Link to='/todo' className='p-4'>Todo List</Link>
 				<li className='mt-2 mb-1 h-[1px] w-full bg-neutral-800'></li>
-				<a href='/bmi' className='p-4'>BMI Calculator</a>
+				<Link to='/bmi' className='p-4'>BMI Calculator</Link>
 			</ul>
 		</div>
 	)
