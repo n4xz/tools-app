@@ -41,10 +41,13 @@ export default function Todo() {
 		<div className='h-screen w-screen bg-black text-white'>
 			<div className='h-screen w-screen overflow-scroll bg-gradient-to-b from-cyan-600/70 to-indigo-700 px-8 pb-32'>
 				<Navbar />
-				<h1 className='text-3xl mb-4 font-semibold text-center mt-24'>Today's tasks:</h1>
-				<div className='mx-auto flex max-h-min min-h-[80%] max-w-screen-md flex-col gap-12 rounded-md bg-gradient-to-br from-black/20 to-black/20 px-8 pt-12 pb-8 shadow-2xl'>
+				<div className='mx-auto mt-20 md:mt-32 flex max-h-min min-h-[80%] max-w-screen-md flex-col gap-12 rounded-md bg-gradient-to-br from-black/20 to-black/20 px-8 pt-12 pb-8 shadow-2xl'>
+					<h1 className='mb-4 text-center text-3xl font-semibold'>
+						Today's tasks:
+					</h1>
 					<div className='mx-auto flex h-10 min-w-full justify-between rounded-md text-xs shadow-2xl drop-shadow-2xl md:text-lg'>
 						<input
+							placeholder='Add a new task here...'
 							onChange={handleChange}
 							className='w-full rounded-l-md bg-black/20 px-4 focus:outline-none'
 						></input>

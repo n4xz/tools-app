@@ -42,7 +42,7 @@ const Main = () => {
 
 	return (
 		<div>
-			<div className='mx-auto mt-32 flex flex-col items-center rounded-md bg-gradient-to-br from-black/20 to-black/20 px-8 pt-8 pb-8 shadow-2xl md:max-w-[500px]'>
+			<div className='mx-auto mt-20 md:mt-64 flex flex-col items-center rounded-md bg-gradient-to-br from-black/20 to-black/20 px-8 pt-8 pb-8 shadow-2xl md:max-w-[500px]'>
 				<h2 className='mb-6 text-2xl font-semibold'>BMI Calculator</h2>
 				<div className='mb-5 min-w-full'>
 					<p>Your weight (kilograms):</p>
