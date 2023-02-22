@@ -2,7 +2,7 @@ import { HiOutlineX } from 'react-icons/hi'
 
 export default function Menu({menu, handleMenu}) {
 	return (
-		<div className='bg-black pt-24 fixed top-0 bottom-1/2 left-0 right-0 z-20 shadow-2xl drop-shadow-2xl'>
+		<div className='bg-black pt-24 fixed top-0 left-0 right-0 z-20 shadow-2xl drop-shadow-2xl'>
 			<button onClick={handleMenu}>
 				<HiOutlineX size={40} color='white' className='fixed right-6 top-4' />
 			</button>
