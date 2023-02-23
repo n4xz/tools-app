@@ -7,8 +7,8 @@ const Bmi = () => {
 		<>
 			<div className='h-screen w-screen bg-black text-white'>
 				<div className='h-screen w-screen overflow-scroll bg-gradient-to-b from-sky-500 to-teal-500 px-8 pb-32'>
-          <Navbar />
-          <Main />
+					<Navbar />
+					<Main />
 				</div>
 			</div>
 		</>

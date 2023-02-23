@@ -13,14 +13,23 @@ export default function Navbar() {
 		<>
 			<header className='flex flex-col gap-4'>
 				<div className='flex justify-between'>
-					<a href='/' className='flex h-min w-max items-center px-2 pb-1 text-3xl font-thin italic shadow outline outline-[0.5px]'>
+					<a
+						href='/'
+						className='flex h-min w-max items-center px-2 pb-1 text-3xl font-thin italic shadow outline outline-[0.5px]'
+					>
 						Everyday Tools
 					</a>
 					<div className='hidden w-max items-center gap-8 text-white md:flex'>
-						<Link to='/todo' className='transition-transform duration-200 hover:scale-110'>
+						<Link
+							to='/todo'
+							className='transition-transform duration-200 hover:scale-110'
+						>
 							Todo List
 						</Link>
-						<Link to='/bmi' className='transition-transform duration-200 hover:scale-110'>
+						<Link
+							to='/bmi'
+							className='transition-transform duration-200 hover:scale-110'
+						>
 							BMI Calculator
 						</Link>
 					</div>

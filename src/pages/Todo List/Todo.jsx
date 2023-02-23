@@ -10,6 +10,11 @@ export default function Todo() {
 		setNewTask(event.target.value)
 	}
 
+	function clearTasks() {
+		setTodoList([])
+		setNewTask('')
+	}
+
 	function addTask() {
 		const task = {
 			id: todoList.length === 0 ? 1 : todoList[todoList.length - 1].id + 1,
@@ -19,6 +24,7 @@ export default function Todo() {
 		task.taskName === ''
 			? alert('Please input a valid task!')
 			: setTodoList([...todoList, task])
+		setNewTask('')
 	}
 
 	function completeTask(id) {
@@ -41,12 +47,13 @@ export default function Todo() {
 		<div className='h-screen w-screen bg-black text-white'>
 			<div className='h-screen w-screen overflow-scroll bg-gradient-to-b from-cyan-600/70 to-indigo-700 px-8 pb-32'>
 				<Navbar />
-				<div className='mx-auto mt-20 md:mt-32 flex max-h-min min-h-[80%] max-w-screen-md flex-col gap-12 rounded-md bg-gradient-to-br from-black/20 to-black/20 px-8 pt-12 pb-8 shadow-2xl'>
+				<div className='mx-auto mt-20 flex max-h-min min-h-[80%] max-w-screen-md flex-col items-center gap-4 rounded-md bg-gradient-to-br from-black/20 to-black/20 px-8 pt-12 shadow-2xl sm:gap-12 md:mt-32'>
 					<h1 className='mb-4 text-center text-3xl font-semibold'>
 						Today's tasks:
 					</h1>
-					<div className='mx-auto flex h-10 min-w-full justify-between rounded-md text-xs shadow-2xl drop-shadow-2xl md:text-lg'>
+					<div className='flex h-10 min-w-full justify-between rounded-md text-xs shadow-2xl drop-shadow-2xl md:text-lg'>
 						<input
+							value={newTask}
 							placeholder='Add a new task here...'
 							onChange={handleChange}
 							className='w-full rounded-l-md bg-black/20 px-4 focus:outline-none'
@@ -58,7 +65,13 @@ export default function Todo() {
 							Add Task
 						</button>
 					</div>
-					<ul>
+					<button
+						onClick={clearTasks}
+						className='w-fit rounded-md border px-2 py-1 transition-all duration-100 ease-in-out active:bg-white active:text-black md:hover:bg-white md:hover:text-black md:hover:drop-shadow-lg'
+					>
+						Delete all tasks
+					</button>
+					<ul className='min-w-[100%] pb-6 sm:px-12'>
 						{todoList.map((task) => {
 							return (
 								<Task

@@ -1,4 +1,4 @@
-import { createBrowserRouter, createRoutesFromElements, Link, Route, Outlet, RouterProvider } from 'react-router-dom'
+import { createBrowserRouter, createRoutesFromElements, Route, Outlet, RouterProvider } from 'react-router-dom'
 import './index.css'
 import Bmi from './pages/BMI Calculator/Bmi'
 import Home from './pages/Home Page/Home'

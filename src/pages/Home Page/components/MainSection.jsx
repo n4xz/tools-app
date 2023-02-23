@@ -12,7 +12,7 @@ export default function MainSection() {
 				inventore doloribus modi quasi saepe quisquam iste reiciendis
 				doloremque, perspiciatis pariatur dignissimos.
 			</div>
-			<div className='flex items-center rounded-md bg-black/10 p-4 text-xs drop-shadow-2xl italic text-center'>
+			<div className='flex items-center rounded-md bg-black/10 p-4 text-center text-xs italic drop-shadow-2xl'>
 				''A multi-tool (or multitool) is a hand tool that combines several
 				individual functions in a single unit.''
 			</div>

@@ -2,7 +2,7 @@ import React from 'react'
 import { GiWeightLiftingUp } from 'react-icons/gi'
 
 const Empty = () => {
-  return (
+	return (
 		<div className='flex flex-col items-center text-xs'>
 			<p className='mt-4 text-white/20'>
 				Complete the form to find out your results.
