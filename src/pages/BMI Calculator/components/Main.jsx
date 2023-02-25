@@ -1,4 +1,7 @@
 import { useEffect, useState } from 'react'
+import { ReactComponent as Normal } from './bodies/normal.svg'
+import { ReactComponent as Over } from './bodies/overweight.svg'
+import { ReactComponent as Under } from './bodies/underweight.svg'
 import Empty from './Empty'
 
 const Main = () => {
@@ -15,15 +18,27 @@ const Main = () => {
 		setBmi((weight / (height / 100) ** 2).toFixed(2))
 	}
 	const [health, setHealth] = useState('')
+	const [under, setUnder] = useState(false)
+	const [normal, setNormal] = useState(false)
+	const [over, setOver] = useState(false)
 
 	function isUnderweight() {
 		setHealth('You are underweight.')
+		setUnder(true)
+		setNormal(false)
+		setOver(false)
 	}
 	function isHealthy() {
 		setHealth('You are a healthy individual!')
+		setUnder(false)
+		setNormal(true)
+		setOver(false)
 	}
 	function isOverweight() {
 		setHealth('You are overweight.')
+		setUnder(false)
+		setNormal(false)
+		setOver(true)
 	}
 	function handleHealth() {
 		if (bmi < 18.5) {
@@ -85,10 +100,15 @@ const Main = () => {
 						<Empty />
 					) : (
 						<>
-							<p className='mt-4 text-center text-xl font-semibold'>{health}</p>
-							<p className='mt-4 text-center text-2xl'>
+							<p className='text-center text-3xl'>
 								Your BMI is: <b>{bmi}</b>
 							</p>
+							<div className='flex justify-center'>
+								{under && <Under />}
+								{normal && <Normal />}
+								{over && <Over />}
+							</div>
+							<p className='text-center text-2xl font-semibold'>{health}</p>
 						</>
 					)}
 				</div>

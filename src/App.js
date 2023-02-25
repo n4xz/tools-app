@@ -3,6 +3,7 @@ import './index.css'
 import Bmi from './pages/BMI Calculator/Bmi'
 import Home from './pages/Home Page/Home'
 import Todo from './pages/Todo List/Todo'
+import useWindowDimensions from './dimensions'
 
 export default function App() {
 	const router = createBrowserRouter(
@@ -22,6 +23,7 @@ export default function App() {
 
 }
 const Root = () => {
+	const { height, width } = useWindowDimensions()
 	return (
 		<>
 			<div>

@@ -8,10 +8,9 @@ export default function Menu({handleMenu}) {
 				<HiOutlineX size={40} color='white' className='fixed right-6 top-4' />
 			</button>
 			<div className='flex flex-col items-center'>
-				<div className='h-min w-max px-4 pb-2 text-center text-5xl font-thin italic shadow outline outline-[1px]'>
+				<div className='h-min w-max px-4 pb-2 text-center text-5xl font-thin italic shadow outline outline-[1px] mb-16'>
 					Everyday Tools
 				</div>
-				<p className='mt-16 mb-2 border-b'>Choose your app</p>
 				<span className='mt-2 mb-1 h-[1px] w-full bg-white/10'></span>
 				<Link to='/todo' className='p-4'>
 					Todo List
