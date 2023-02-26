@@ -1,7 +1,7 @@
+import { motion } from 'framer-motion'
 import { useState } from 'react'
 import Navbar from './components/Navbar'
 import { Task } from './components/Task'
-import { motion } from 'framer-motion'
 
 export default function Todo() {
 	const [todoList, setTodoList] = useState([])
@@ -71,28 +71,29 @@ export default function Todo() {
 							Add Task
 						</button>
 					</div>
-					<button
-						onClick={clearTasks}
-						className='w-fit rounded-md border px-2 py-1 transition-all duration-100 ease-in-out active:bg-white active:text-black md:hover:bg-white md:hover:text-black md:hover:drop-shadow-lg'
-					>
-						Delete all tasks
-					</button>
-					{(todoList.length > 0) && (
-					<ul className='min-w-full rounded-md bg-black/20 p-4 pb-8'>
-						<p className='pb-5'>Tasks you need to complete:</p>
-						{todoList.map((task) => {
-							return (
-								<Task
-									taskName={task.taskName}
-									id={task.id}
-									deleteTask={deleteTask}
-									completeTask={completeTask}
-									completed={task.completed}
-								/>
-							)
-						})}
-					</ul>
-						
+					{todoList.length > 0 && (
+						<button
+							onClick={clearTasks}
+							className='w-fit rounded-md border px-2 py-1 transition-all duration-100 ease-in-out active:bg-white active:text-black md:hover:bg-white md:hover:text-black md:hover:drop-shadow-lg'
+						>
+							Delete all tasks
+						</button>
+					)}
+					{todoList.length > 0 && (
+						<ul className='min-w-full rounded-md bg-black/20 p-4 pb-8'>
+							<p className='pb-5'>Tasks you need to complete:</p>
+							{todoList.map((task) => {
+								return (
+									<Task
+										taskName={task.taskName}
+										id={task.id}
+										deleteTask={deleteTask}
+										completeTask={completeTask}
+										completed={task.completed}
+									/>
+								)
+							})}
+						</ul>
 					)}
 				</motion.div>
 			</div>
