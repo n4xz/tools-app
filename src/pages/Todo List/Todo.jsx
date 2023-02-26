@@ -71,7 +71,8 @@ export default function Todo() {
 					>
 						Delete all tasks
 					</button>
-					<ul className='min-w-[100%] pb-6 sm:px-12'>
+					<ul className='min-w-[100%] rounded-md bg-black/20 p-4 pb-6 sm:px-12'>
+						<p>Tasks you need to complete:</p>
 						{todoList.map((task) => {
 							return (
 								<Task
