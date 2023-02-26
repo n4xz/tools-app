@@ -30,8 +30,8 @@ export default function Footer() {
 						<FaLinkedin size={30} className='hover:text-blue-500' />
 					</a>
 				</div>
-				<div className='mx-auto flex items-center justify-between gap-4 md:mx-0 md:gap-6'>
-					<div className='py-1 px-2'>
+				<div className='flex items-center gap-4 md:mx-0 md:gap-6'>
+					<div className='py-1'>
 						<button
 							onClick={handleContact}
 							className='relative opacity-60 duration-300 hover:cursor-pointer hover:opacity-100 hover:transition-opacity'
@@ -43,7 +43,7 @@ export default function Footer() {
 								animate={{ y: -40, x: -194, opacity: 1 }}
 								initial={{ y: 200, x: -194, scale: 0.9, opacity: 0 }}
 								transition={{ duration: 0.6 }}
-								className='fixed bottom-32 left-1/2 min-w-max rounded-md bg-white py-12  px-8 text-center text-cyan-900 shadow-2xl drop-shadow-2xl'
+								className='fixed bottom-32 left-[179px] min-w-max rounded-md bg-white py-12  px-8 text-center text-cyan-900 shadow-2xl drop-shadow-2xl'
 							>
 								<p className='mb-4'>
 									You can contact me using the following methods:
