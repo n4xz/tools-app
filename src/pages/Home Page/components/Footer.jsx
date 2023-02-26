@@ -1,4 +1,6 @@
+import { motion } from 'framer-motion'
 import { useState } from 'react'
+import { FaGithubSquare, FaLinkedin } from 'react-icons/fa'
 
 export default function Footer() {
 	const [contact, setContact] = useState(false)
@@ -17,9 +19,17 @@ export default function Footer() {
 		<footer>
 			<div className='h-[1px] w-full bg-white/20'></div>
 			<div className='flex items-center justify-between pt-4'>
-				<p className='hidden text-xs opacity-60 md:flex md:text-sm'>
-					© 2023 - All rights reserved
-				</p>
+				<div className='flex items-center gap-2'>
+					<p className='hidden text-xs opacity-60 md:flex md:text-sm'>
+						© 2023 - Mihai Postelnicu
+					</p>
+					<a href='https://github.com/n4xz'>
+						<FaGithubSquare size={30} className='hover:text-orange-500' />
+					</a>
+					<a href='https://www.linkedin.com/in/mihaipostelnicu/'>
+						<FaLinkedin size={30} className='hover:text-blue-500' />
+					</a>
+				</div>
 				<div className='mx-auto flex items-center justify-between gap-4 md:mx-0 md:gap-6'>
 					<div className='py-1 px-2'>
 						<button
@@ -29,17 +39,26 @@ export default function Footer() {
 							Contact
 						</button>
 						{contact && (
-							<div className='fixed top-1/2 left-1/2 h-64 w-96 -translate-y-[50%] -translate-x-[50%] rounded-md bg-cyan-900/95 py-20 px-8 text-center shadow-2xl drop-shadow-2xl'>
+							<motion.div
+								animate={{ y: -40, x: -194, opacity: 1 }}
+								initial={{ y: 200, x: -194, scale: 0.9, opacity: 0 }}
+								transition={{ duration: 0.6 }}
+								className='fixed bottom-32 left-1/2 min-w-max rounded-md bg-white py-12  px-8 text-center text-cyan-900 shadow-2xl drop-shadow-2xl'
+							>
 								<p className='mb-4'>
-									You can find us using the following methods:
+									You can contact me using the following methods:
 								</p>
 								<li>
-									<a href='tel:0731692494'>Phone: +40 73 169 2494</a>
+									<a href='tel:0731692494' className='hover:underline'>
+										Phone: +40 73 169 2494
+									</a>
 								</li>
 								<li>
-									<a href='mailto:n4xz@icloud.com'>Email: n4xz@icloud.com</a>
+									<a href='mailto:n4xz@icloud.com' className='hover:underline'>
+										Email: n4xz@icloud.com
+									</a>
 								</li>
-							</div>
+							</motion.div>
 						)}
 					</div>
 					<div>
@@ -50,15 +69,20 @@ export default function Footer() {
 							About
 						</button>
 						{about && (
-							<div className='fixed top-1/2 left-1/2 h-64 w-96 -translate-y-[50%] -translate-x-[50%] rounded-md bg-cyan-900/95 py-16 px-8 text-center shadow-2xl drop-shadow-2xl'>
+							<motion.div
+								animate={{ y: -40, x: -192, opacity: 1 }}
+								initial={{ y: 200, x: -192, scale: 0.9, opacity: 0 }}
+								transition={{ duration: 0.6 }}
+								className='fixed bottom-32 left-48 min-w-full rounded-md bg-white  py-12 px-8 text-center text-cyan-900 shadow-2xl drop-shadow-2xl'
+							>
 								<li>
 									The purpose of this website is to cover a large spectrum of
 									web tools you can use when in need.{' '}
 								</li>
 								<li className='mt-4'>
-									For new tool ideas, contact us via the contact section!
+									For new tool ideas, contact me via the contact section!
 								</li>
-							</div>
+							</motion.div>
 						)}
 					</div>
 				</div>

@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import Navbar from './components/Navbar'
 import { Task } from './components/Task'
+import { motion } from 'framer-motion'
 
 export default function Todo() {
 	const [todoList, setTodoList] = useState([])
@@ -47,7 +48,12 @@ export default function Todo() {
 		<div className='h-screen w-screen bg-black text-white'>
 			<div className='h-screen w-screen overflow-scroll bg-gradient-to-b from-cyan-600/70 to-indigo-700 px-8 pb-32'>
 				<Navbar />
-				<div className='mx-auto mt-20 flex max-h-min min-h-[80%] max-w-screen-md flex-col items-center gap-4 rounded-md bg-gradient-to-br from-black/20 to-black/20 px-8 pt-12 shadow-2xl sm:gap-12 md:mt-32'>
+				<motion.div
+					animate={{ opacity: 1 }}
+					initial={{ opacity: 0 }}
+					transition={{ duration: 1 }}
+					className='mx-auto mt-20 flex max-h-min min-h-[80%] max-w-screen-md flex-col items-center gap-4 rounded-md bg-gradient-to-br from-black/20 to-black/20 px-8 pt-12 shadow-2xl sm:gap-12 md:mt-32'
+				>
 					<h1 className='mb-4 text-center text-3xl font-semibold'>
 						Today's tasks:
 					</h1>
@@ -71,8 +77,9 @@ export default function Todo() {
 					>
 						Delete all tasks
 					</button>
-					<ul className='min-w-[100%] rounded-md bg-black/20 p-4 pb-6 sm:px-12'>
-						<p>Tasks you need to complete:</p>
+					{(todoList.length > 0) && (
+					<ul className='min-w-full rounded-md bg-black/20 p-4 pb-8'>
+						<p className='pb-5'>Tasks you need to complete:</p>
 						{todoList.map((task) => {
 							return (
 								<Task
@@ -85,7 +92,9 @@ export default function Todo() {
 							)
 						})}
 					</ul>
-				</div>
+						
+					)}
+				</motion.div>
 			</div>
 		</div>
 	)

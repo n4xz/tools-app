@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion'
 import { useEffect, useState } from 'react'
 import { ReactComponent as Normal } from './bodies/normal.svg'
 import { ReactComponent as Over } from './bodies/overweight.svg'
@@ -60,7 +61,12 @@ const Main = () => {
 
 	return (
 		<div>
-			<div className='mx-auto mt-20 flex flex-col items-center rounded-md bg-gradient-to-br from-black/20 to-black/20 px-8 pt-8 pb-8 shadow-2xl md:mt-64 md:max-w-[500px]'>
+			<motion.div
+				animate={{ opacity: 1 }}
+				initial={{ opacity: 0 }}
+				transition={{ duration: 1 }}
+				className='mx-auto mt-20 flex flex-col items-center rounded-md bg-gradient-to-br from-black/20 to-black/20 px-8 pt-8 pb-8 shadow-2xl md:mt-64 md:max-w-[500px]'
+			>
 				<h2 className='mb-6 text-2xl font-semibold'>BMI Calculator</h2>
 				<div className='mb-5 min-w-full'>
 					<p>Your weight (kilograms):</p>
@@ -95,11 +101,15 @@ const Main = () => {
 					Submit
 				</button>
 				<div className='flex flex-col items-center text-xs'></div>
-				<div>
+				<>
 					{isNaN(bmi) ? (
 						<Empty />
 					) : (
-						<>
+						<motion.div
+							animate={{ opacity: 1 }}
+							initial={{ opacity: 0 }}
+							transition={{ duration: 0.5 }}
+						>
 							<p className='text-center text-3xl'>
 								Your BMI is: <b>{bmi}</b>
 							</p>
@@ -109,10 +119,10 @@ const Main = () => {
 								{over && <Over />}
 							</div>
 							<p className='text-center text-2xl font-semibold'>{health}</p>
-						</>
+						</motion.div>
 					)}
-				</div>
-			</div>
+				</>
+			</motion.div>
 		</div>
 	)
 }

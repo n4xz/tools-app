@@ -6,17 +6,16 @@ export const Task = (props) => {
 				<div className='flex gap-3'>
 					<button
 						style={{
-							backgroundColor: props.completed ? 'green' : 'transparent',
-							borderRadius: '20px'
+							backgroundColor: props.completed ? 'green' : 'transparent'
 						}}
 						onClick={() => props.completeTask(props.id)}
-						className='h-5 w-5 rounded-full text-xs outline outline-[1px]'
+						className='h-5 w-5 text-xs outline outline-[1px] hover:text-green-700'
 					>
 						✓
 					</button>
 					<button
 						onClick={() => props.deleteTask(props.id)}
-						className='h-5 w-5 rounded-full text-xs outline outline-[1px] hover:text-red-600'
+						className='h-5 w-5 text-xs outline outline-[1px] hover:text-red-600'
 					>
 						✘
 					</button>
