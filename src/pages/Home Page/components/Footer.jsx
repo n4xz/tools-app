@@ -31,36 +31,36 @@ export default function Footer() {
 					</a>
 				</div>
 				<div className='flex items-center gap-4 md:mx-0 md:gap-6'>
-					<div className='py-1'>
+					<div>
 						<button
 							onClick={handleContact}
 							className='relative opacity-60 duration-300 hover:cursor-pointer hover:opacity-100 hover:transition-opacity'
 						>
 							Contact
 						</button>
-						{contact && (
-							<motion.div
-								animate={{ y: -40, x: -194, opacity: 1 }}
-								initial={{ y: 200, x: -194, scale: 0.9, opacity: 0 }}
-								transition={{ duration: 0.6 }}
-								className='fixed bottom-32 left-[179px] min-w-max rounded-md bg-white py-12  px-8 text-center text-cyan-900 shadow-2xl drop-shadow-2xl'
-							>
-								<p className='mb-4'>
-									You can contact me using the following methods:
-								</p>
-								<li>
-									<a href='tel:0731692494' className='hover:underline'>
-										Phone: +40 73 169 2494
-									</a>
-								</li>
-								<li>
-									<a href='mailto:n4xz@icloud.com' className='hover:underline'>
-										Email: n4xz@icloud.com
-									</a>
-								</li>
-							</motion.div>
-						)}
 					</div>
+					{contact && (
+						<motion.div
+							animate={{ opacity: 1 }}
+							initial={{ opacity: 0 }}
+							transition={{ duration: 0.8 }}
+							className='fixed left-1/2 bottom-[30%] min-w-[80%] -translate-x-1/2 rounded-md bg-white py-6 px-4 text-center text-cyan-900 shadow-2xl drop-shadow-2xl md:min-w-fit md:py-12 md:px-10'
+						>
+							<p className='mb-4 font-semibold'>
+								You can contact me using the following methods:
+							</p>
+							<li>
+								<a href='tel:0731692494' className='hover:underline'>
+									Phone: +40 73 169 2494
+								</a>
+							</li>
+							<li>
+								<a href='mailto:n4xz@icloud.com' className='hover:underline'>
+									Email: n4xz@icloud.com
+								</a>
+							</li>
+						</motion.div>
+					)}
 					<div>
 						<button
 							onClick={handleAbout}
@@ -70,10 +70,10 @@ export default function Footer() {
 						</button>
 						{about && (
 							<motion.div
-								animate={{ y: -40, x: -192, opacity: 1 }}
-								initial={{ y: 200, x: -192, scale: 0.9, opacity: 0 }}
-								transition={{ duration: 0.6 }}
-								className='fixed bottom-32 left-48 min-w-full rounded-md bg-white  py-12 px-8 text-center text-cyan-900 shadow-2xl drop-shadow-2xl'
+								animate={{ opacity: 1 }}
+								initial={{ opacity: 0 }}
+								transition={{ duration: 0.8 }}
+								className='fixed left-1/2 bottom-[30%] min-w-[80%] -translate-x-1/2 rounded-md bg-white py-6 px-4 text-center text-cyan-900 shadow-2xl drop-shadow-2xl md:min-w-fit md:py-12 md:px-10'
 							>
 								<li>
 									The purpose of this website is to cover a large spectrum of

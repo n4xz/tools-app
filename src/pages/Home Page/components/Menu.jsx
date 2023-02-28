@@ -24,6 +24,10 @@ export default function Menu({ handleMenu }) {
 				<Link to='/bmi' className='mb-3 mt-1 p-4'>
 					BMI Calculator
 				</Link>
+				<span className='mt-2 mb-1 h-[1px] w-full bg-white/10'></span>
+				<p className='mb-3 mt-1 p-4'>
+					Converter (not working yet)
+				</p>
 			</div>
 		</motion.div>
 	)

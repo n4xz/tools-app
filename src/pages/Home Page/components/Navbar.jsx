@@ -32,6 +32,11 @@ export default function Navbar() {
 						>
 							BMI Calculator
 						</Link>
+						<p
+							className='transition-transform duration-200 hover:scale-110'
+						>
+							Converter (not working yet)
+						</p>
 					</div>
 					<button className='md:hidden' onClick={handleMenu}>
 						<HiMenuAlt3 size={40} />
