@@ -1,16 +1,13 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import Lengths from './Lengths'
 import Temperatures from './Temperatures'
 import Weights from './Weights'
 
 export default function Main() {
-
 	const [category, setCategory] = useState('')
 	function handleCategory(event) {
 		setCategory(event.target.value)
-  }
-  
-
+	}
 
 	return (
 		<>
@@ -38,7 +35,7 @@ export default function Main() {
 				<div className='grid w-fit align-middle md:grid-cols-3'>
 					<div className='flex flex-col'>
 						<input
-              type='number'
+							type='number'
 							className='rounded-t-md bg-black/20 px-4 py-4 placeholder:text-xs placeholder:text-white/20 focus:outline-none'
 						/>
 						<select
@@ -53,8 +50,8 @@ export default function Main() {
 					</div>
 					<span className='mx-auto text-3xl md:translate-y-2'>=</span>
 					<div className='flex flex-col'>
-            <input
-              type='number'
+						<input
+							type='number'
 							className='rounded-t-md bg-black/20 px-4 py-4 placeholder:text-xs placeholder:text-white/20 focus:outline-none'
 						/>
 						<select
