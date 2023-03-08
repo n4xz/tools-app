@@ -9,7 +9,7 @@ export default function Converter() {
 				animate={{ opacity: 1 }}
 				initial={{ opacity: 0 }}
 				transition={{ duration: 1 }}
-				className='h-screen w-screen overflow-scroll bg-gradient-to-tl from-[#404348] via-[#c89c76]/70 to-[#c26c49] px-4'
+				className='h-screen w-screen overflow-scroll bg-gradient-to-t from-rose-500/50 to-red-500/90 px-4'
 			>
 				<Navbar />
 				<Main />

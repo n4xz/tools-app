@@ -7,7 +7,7 @@ import {
 } from 'react-router-dom'
 import './index.css'
 import Bmi from './pages/BMI Calculator/Bmi'
-// import Converter from './pages/Converter/Converter'
+import Converter from './pages/Converter/Converter'
 import Home from './pages/Home Page/Home'
 import Todo from './pages/Todo List/Todo'
 
@@ -18,7 +18,7 @@ export default function App() {
 				<Route index element={<Home />} />
 				<Route path='/todo' element={<Todo />} />
 				<Route path='/bmi' element={<Bmi />} />
-				{/* <Route path='/converter' element={<Converter />} /> */}
+				<Route path='/converter' element={<Converter />} />
 			</Route>
 		)
 	)

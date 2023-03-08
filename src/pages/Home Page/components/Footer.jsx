@@ -23,10 +23,18 @@ export default function Footer() {
 					<p className='hidden text-xs opacity-60 md:flex md:text-sm'>
 						© 2023 - Mihai Postelnicu
 					</p>
-					<a href='https://github.com/n4xz'>
+					<a
+						href='https://github.com/n4xz'
+						target='_blank'
+						rel='noopener noreferrer'
+					>
 						<FaGithubSquare size={30} className='hover:text-orange-500' />
 					</a>
-					<a href='https://www.linkedin.com/in/mihaipostelnicu/'>
+					<a
+						href='https://www.linkedin.com/in/mihaipostelnicu/'
+						target='_blank'
+						rel='noopener noreferrer'
+					>
 						<FaLinkedin size={30} className='hover:text-blue-500' />
 					</a>
 				</div>
