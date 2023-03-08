@@ -13,7 +13,7 @@ const UnitsRow = (props) => {
 			<input
 				value={value}
 				onChange={handleValueChange}
-				type='text'
+				type='number'
 				className='rounded-t-md bg-black/20 px-4 py-4 focus:outline-none'
 			/>
 			<select

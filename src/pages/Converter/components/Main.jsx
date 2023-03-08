@@ -19,11 +19,11 @@ export default function Main() {
 	const [outputUnit, setOutputUnit] = useState('meters')
 
 	
-	function convert() {
-		const inputInMeters = inputValue * lengthValues[inputUnit]
-		const outputInMeters = inputInMeters / lengthValues[outputUnit]
-		setOutputValue(outputInMeters)
-	}
+	// function convert() {
+	// 	const inputInMeters = inputValue * lengthValues[inputUnit]
+	// 	const outputInMeters = inputInMeters / lengthValues[outputUnit]
+	// 	setOutputValue(outputInMeters)
+	// }
 	
 	function handleInputValueChange(event) {
 		setInputValue(event.target.value)
@@ -42,8 +42,10 @@ export default function Main() {
 	}
 	
 	useEffect(() => {
-		convert()
-	}, [convert])
+		const inputInMeters = inputValue * lengthValues[inputUnit]
+		const outputInMeters = inputInMeters / lengthValues[outputUnit]
+		setOutputValue(outputInMeters)
+	}, [inputValue, lengthValues, inputUnit, outputUnit])
 	return (
 		<>
 			<div className='mx-auto mt-20 flex max-w-[500px] flex-col items-center rounded-md bg-gradient-to-br from-black/20 to-black/10 px-8 py-12 text-white shadow-2xl md:mt-64'>
