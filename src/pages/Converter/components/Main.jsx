@@ -17,14 +17,8 @@ export default function Main() {
 	const [inputValue, setInputValue] = useState(0)
 	const [outputValue, setOutputValue] = useState(0)
 	const [inputUnit, setInputUnit] = useState('Meter')
-	const [outputUnit, setOutputUnit] = useState('meters')
+	const [outputUnit, setOutputUnit] = useState('Meter')
 
-	
-	// function convert() {
-	// 	const inputInMeters = inputValue * lengthValues[inputUnit]
-	// 	const outputInMeters = inputInMeters / lengthValues[outputUnit]
-	// 	setOutputValue(outputInMeters)
-	// }
 	
 	function handleInputValueChange(event) {
 		setInputValue(event.target.value)
