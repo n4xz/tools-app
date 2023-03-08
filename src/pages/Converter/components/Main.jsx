@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import UnitsRow from './UnitsRow'
 
 export default function Main() {
+	// eslint-disable-next-line react-hooks/exhaustive-deps
 	const lengthValues = {
 		Kilometre: 1000,
 		Meter: 1,
