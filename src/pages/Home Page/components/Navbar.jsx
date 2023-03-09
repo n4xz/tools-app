@@ -1,6 +1,7 @@
+import { AnimatePresence } from 'framer-motion'
 import { useState } from 'react'
 import { HiMenuAlt3 } from 'react-icons/hi'
-import { Link } from 'react-router-dom'
+import LinkElement from './LinkElement'
 import Menu from './Menu'
 
 export default function Navbar() {
@@ -20,24 +21,9 @@ export default function Navbar() {
 						Everyday Tools
 					</a>
 					<div className='hidden w-max items-center gap-8 text-white md:flex'>
-						<Link
-							to='/todo'
-							className='transition-transform duration-200 hover:scale-110'
-						>
-							Todo List
-						</Link>
-						<Link
-							to='/bmi'
-							className='transition-transform duration-200 hover:scale-110'
-						>
-							BMI Calculator
-						</Link>
-						<Link
-							to='/converter'
-							className='transition-transform duration-200 hover:scale-110'
-						>
-							Converter
-						</Link>
+						<LinkElement path='/todo' name='Todo List' />
+						<LinkElement path='/bmi' name='BMI Calculator' />
+						<LinkElement path='/converter' name='Length converter' />
 					</div>
 					<button className='md:hidden' onClick={handleMenu}>
 						<HiMenuAlt3 size={40} />
@@ -45,7 +31,9 @@ export default function Navbar() {
 				</div>
 				<div className='bottom-0 h-[1px] w-full bg-white/20'></div>
 			</header>
-			{!menu ? <Menu menu={menu} handleMenu={handleMenu} /> : ''}
+			<AnimatePresence>
+				{!menu ? <Menu menu={menu} handleMenu={handleMenu} /> : ''}
+			</AnimatePresence>
 		</>
 	)
 }

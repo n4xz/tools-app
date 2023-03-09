@@ -1,6 +1,6 @@
 export const Task = (props) => {
 	return (
-		<li className='list-disc ml-6'>
+		<li className='ml-6 list-disc'>
 			<div className='flex items-center justify-between gap-2 px-1 py-2'>
 				<p className='overflow-auto text-sm'>{props.taskName}</p>
 				<div className='flex gap-3'>

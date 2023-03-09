@@ -19,23 +19,22 @@ export default function Main() {
 	const [inputUnit, setInputUnit] = useState('Meter')
 	const [outputUnit, setOutputUnit] = useState('Meter')
 
-	
 	function handleInputValueChange(event) {
 		setInputValue(event.target.value)
 	}
-	
+
 	function handleOutputValueChange(event) {
 		setOutputValue(event.target.value)
 	}
-	
+
 	function handleInputUnitChange(event) {
 		setInputUnit(event.target.value)
 	}
-	
+
 	function handleOutputUnitChange(event) {
 		setOutputUnit(event.target.value)
 	}
-	
+
 	useEffect(() => {
 		const inputInMeters = inputValue * lengthValues[inputUnit]
 		const outputInMeters = inputInMeters / lengthValues[outputUnit]
